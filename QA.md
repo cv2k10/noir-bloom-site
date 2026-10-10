@@ -41,3 +41,11 @@ Replaced the zoomed campaign background with the complete bottle cutout using ob
 ## First-fold cover transition — 10 October 2026
 
 Moved the header inside the hero so the whole first fold pins together. Added a no-spacing hero ScrollTrigger pin for one hero height, with opaque subsequent scenes on a higher stacking layer. Removed hero content fading and image drift during coverage. At scroll 426.5px the hero top remained 0 and intro top was 426.5px; at 853px the intro reached 0. Upward scrolling restored partial coverage. The introduction fills at least one viewport so it can cover the complete hero. Reduced-motion/paused mode retains normal document scrolling.
+
+## Desktop hero framing — 10 October 2026
+
+Removed desktop background zoom and changed the campaign background from cover to contain, right-centered over a matching dark fill. Verified full cap, bottle base and campaign composition at 1456×853. Hero pin and cover transition remain unchanged. Mobile retains its separately composed background treatment. Production build passes.
+
+## Mobile hero framing — 10 October 2026
+
+Changed the mobile campaign background to auto 66% sizing, positioned near the top, with a dark gradient behind the copy. Removed background scaling and adjusted the headline and content placement. Verified at 393×852: the bottle cap and base are visible, headline and CTA remain readable, and there is no horizontal overflow. Desktop framing is unaffected. Production build passes. Screenshot: output/hero-mobile-corrected.png.

@@ -18,3 +18,7 @@ html[data-motion="reduced"]{scroll-behavior:auto}html[data-motion="reduced"] *,h
 /* Cover transition: the full first fold sits beneath subsequent scenes. */
 .hero{z-index:1}.intro,.alchemy,.collection,.ritual,.closing{position:relative;z-index:2}.intro{background-color:var(--bg)}.closing{background-color:var(--bg)}footer{position:relative;z-index:2}
 .intro{min-height:100svh;align-content:center}
+/* Fit the entire campaign composition on desktop, including the cap and base. */
+@media(min-width:651px){.hero{background:#100e0b}.hero-image{background-size:contain;background-position:right center;transform:none}.hero-shade{background:linear-gradient(90deg,#100e0bda 0%,#100e0b65 42%,transparent 70%),linear-gradient(0deg,#14110e 0%,transparent 18%)}}
+/* Mobile campaign framing: avoid stretching a landscape photo to portrait height. */
+@media(max-width:650px){.hero{background:#100e0b}.hero-image{background-size:auto 66%;background-position:66% 8%;transform:none}.hero-shade{background:linear-gradient(90deg,#100e0b55,transparent 70%),linear-gradient(0deg,#14110e 0%,#14110ee8 26%,#14110e80 43%,transparent 65%)}.hero-content{bottom:135px}h1{font-size:clamp(61px,18vw,76px)}}
