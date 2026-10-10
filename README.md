@@ -39,3 +39,7 @@ Collection filters, product details, shopping bag quantity controls, persistent 
 Browser QA covers the initial hero, pinned scene progression, reversal, top/bottom restoration, product filtering, product dialogs, shopping bag operations, newsletter preview, phone-width composition, viewport resizing and reduced-motion layout. See `QA.md` for results and practical limitations.
 
 For the cinematic local preview, open `http://127.0.0.1:5174/?motion=full` (adjust the port to match Vite). The explicit URL enables motion and saves that choice. New localhost previews default to full motion unless the visitor explicitly paused it. Hosted sites continue to honor system reduced motion by default.
+
+The ritual scene uses a full-product image contained inside its panel with reserved travel margins. The bottle, atmospheric backdrop and light sweep scroll at different rates; the bottle stays complete throughout the movement.
+
+The complete hero, including navigation, is pinned for one viewport while the introduction scrolls over it at a higher stacking order. Pin spacing is disabled to preserve natural section positions; reversing scroll uncovers the same stationary first fold.

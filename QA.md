@@ -33,3 +33,11 @@ The original app tab stopped responding to browser inspection/navigation. Opened
 Replaced the stylized mesh scene with independently composited generated photographic bottle, cap, rose, bergamot and sandalwood cutouts. Preserved the pinned bidirectional GSAP timeline, ingredient parallax, reflection sweep, motion toggle and reduced-motion layout. Removed the WebGL dependency from the build. Earlier mesh-specific checks above document the previous implementation.
 
 Photographic scene browser checks passed: scrolling upward from the collection restored the animated composition; cap separates visibly; realistic image layers remain aligned; phone viewport 390×844 shows no horizontal overflow and title/notes remain clear of the objects. Production build passes with the WebGL bundle removed.
+
+## Ritual image correction — 10 October 2026
+
+Replaced the zoomed campaign background with the complete bottle cutout using object-fit contain. Bottle uses 70% of panel height, reserving room for its ±9% parallax travel; background moves in the opposite direction and the light layer travels independently. Verified the full cap and base remain visible. Browser scroll changed the bottle translation from 0.11859px to 27.1209px; reversing restored 0.11859px. Reduced-motion mode keeps all layers static. Build passes.
+
+## First-fold cover transition — 10 October 2026
+
+Moved the header inside the hero so the whole first fold pins together. Added a no-spacing hero ScrollTrigger pin for one hero height, with opaque subsequent scenes on a higher stacking layer. Removed hero content fading and image drift during coverage. At scroll 426.5px the hero top remained 0 and intro top was 426.5px; at 853px the intro reached 0. Upward scrolling restored partial coverage. The introduction fills at least one viewport so it can cover the complete hero. Reduced-motion/paused mode retains normal document scrolling.

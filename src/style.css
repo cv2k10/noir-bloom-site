@@ -11,3 +11,10 @@ html[data-motion="reduced"]{scroll-behavior:auto}html[data-motion="reduced"] *,h
 
 .photo-wood{background-size:333% 100%;aspect-ratio:461/1024;background-position:right center}
 @media(max-width:650px){.bottle-photo-frame{top:58%;width:220px}.notes{bottom:210px}}
+
+/* Keep the full bottle inside the panel throughout its parallax travel. */
+.ritual-art{background:#17120d;isolation:isolate}.ritual-image{inset:0;background:none;transform:none;display:flex;align-items:center;justify-content:center;will-change:transform;z-index:2}.ritual-image img{width:76%;height:70%;object-fit:contain;filter:drop-shadow(0 30px 25px #0009)}.ritual-backdrop{position:absolute;inset:-12%;background:radial-gradient(ellipse at 48% 52%,#9b693741 0%,#4c321b35 35%,transparent 65%),linear-gradient(120deg,#100e0a,#22190f 50%,#100e0b);will-change:transform}.ritual-light{position:absolute;inset:-25%;background:linear-gradient(115deg,transparent 30%,#ebc68a12 43%,#ffe1a023 47%,transparent 54%);mix-blend-mode:screen;will-change:transform;z-index:1}.ritual-art:after{z-index:3;pointer-events:none;background:linear-gradient(0deg,#17130f44,transparent 20%,transparent 85%,#17130f44)}.vertical-caption{z-index:4}html[data-motion="reduced"] .ritual-backdrop,html[data-motion="reduced"] .ritual-light{transform:none!important}
+
+/* Cover transition: the full first fold sits beneath subsequent scenes. */
+.hero{z-index:1}.intro,.alchemy,.collection,.ritual,.closing{position:relative;z-index:2}.intro{background-color:var(--bg)}.closing{background-color:var(--bg)}footer{position:relative;z-index:2}
+.intro{min-height:100svh;align-content:center}
